@@ -1,13 +1,14 @@
 {
-    "name": "nesk/rialto",
-    "description": "Manage Node resources from PHP",
+    "name": "nesk/puphpeteer",
+    "description": "A Puppeteer bridge for PHP, supporting the entire API.",
     "keywords": [
         "php",
-        "node",
-        "wrapper",
-        "communication",
-        "bridge",
-        "socket"
+        "puppeteer",
+        "headless-chrome",
+        "testing",
+        "web",
+        "developer-tools",
+        "automation"
     ],
     "type": "library",
     "license": "MIT",
@@ -18,26 +19,31 @@
         }
     ],
     "require": {
-        "php": ">=7.1",
-        "clue/socket-raw": "^1.2",
-        "psr/log": "^1.0",
-        "symfony/process": "^3.3|^4.0|^5.0|^6.0"
+        "php": ">=7.3",
+        "nesk/rialto": "dev-dev",
+        "psr/log": "^1.0|^2.0|^3.0",
+        "vierbergenlars/php-semver": "^3.0.2"
     },
     "require-dev": {
-        "monolog/monolog": "^1.23",
-        "phpunit/phpunit": "^6.5|^7.0|^8.0"
+        "monolog/monolog": "^2.0",
+        "phpunit/phpunit": "^9.0",
+        "symfony/process": "^4.0|^5.0|^6.0",
+        "symfony/console": "^4.0|^5.0|^6.0"
     },
-    "suggest": {
-        "ext-weakref": "Required to run all the tests"
-    },
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "https://github.com/sietzekeuning/rialto"
+        }
+    ],
     "autoload": {
         "psr-4": {
-            "Nesk\\Rialto\\": "src/"
+            "Nesk\\Puphpeteer\\": "src/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "Nesk\\Rialto\\Tests\\": "tests/"
+            "Nesk\\Puphpeteer\\Tests\\": "tests/"
         }
     },
     "scripts": {
